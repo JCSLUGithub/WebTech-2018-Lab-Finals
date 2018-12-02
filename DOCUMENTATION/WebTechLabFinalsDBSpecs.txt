@@ -8,49 +8,49 @@ DATABASE SPECIFICATIONS
 ##############
 
 - adminsp
-	>>> adminsp_id
-	>>> username
-	>>> password
-	>>> business_name
-	>>> email
-	>>> first_name
-	>>> last_name
-	>>> contact_number
-	>>> address_line
-	>>> city
-	>>> province
-	>>> postal_code
-	>>> adminsp_image
-	>>> registration_date
-	>>> account_status
+	>>> adminsp_id			int (16)		PRIMARY
+	>>> username			varchar (32)	UNIQUE
+	>>> password			varchar (32)	
+	>>> business_name		varchar (128)	UNIQUE
+	>>> email				varchar (128)	UNIQUE
+	>>> first_name			varchar (32)	
+	>>> last_name			varchar (32)	
+	>>> contact_number		varchar (11)	
+	>>> address_line		text			
+	>>> city				varchar (64)	
+	>>> province			varchar (64)	
+	>>> postal_code			int (4)			
+	>>> adminsp_image		mediumblob		
+	>>> registration_date	timestamp		CURRENT_TIMESTAMP
+	>>> account_status		enum			
 - client
-	>>> client_id
-	>>> username
-	>>> password
-	>>> email
-	>>> first_name
-	>>> last_name
-	>>> contact_number
-	>>> address_line
-	>>> city
-	>>> province
-	>>> postal_code
-	>>> client_image
-	>>> registration_date
-	>>> account_status
+	>>> client_id			int (16)		PRIMARY
+	>>> username			varchar (32)	UNIQUE
+	>>> password			varchar (32)	
+	>>> email				varchar (128)	UNIQUE
+	>>> first_name			varchar (32)	
+	>>> last_name			varchar (32)	
+	>>> contact_number		varchar (11)	
+	>>> address_line		text			
+	>>> city				varchar (64)	
+	>>> province			varchar (64)	
+	>>> postal_code			int (4)			
+	>>> client_image		mediumblob		
+	>>> registration_date	timestamp		CURRENT_TIMESTAMP
+	>>> account_status		enum			
 - service
-	>>> service_id
-	>>> provider_id
-	>>> name
-	>>> description
-	>>> service_fee
-	>>> service_image
-	>>> service_status
+	>>> service_id			int (16)		PRIMARY
+	>>> provider_id			int (16)		
+	>>> name				varchar (128)	
+	>>> description			text			
+	>>> service_fee			decimal (7,2)	
+	>>> service_image		mediumblob		
+	>>> service_status		tinyint (1)		
 - transaction
-	>>> trans_number
-	>>> init_date
-	>>> comp_date
-	>>> service_id
-	>>> client_id
-	>>> adminsp_id
-	>>> status
+	>>> trans_number		int (16)		PRIMARY
+	>>> init_date			timestamp		CURRENT_TIMESTAMP
+	>>> comp_date			timestamp		NULL
+	>>> service_id			int (16)		
+	>>> client_id			int (16)		
+	>>> adminsp_id			int (16)		
+	>>> status				enum			
