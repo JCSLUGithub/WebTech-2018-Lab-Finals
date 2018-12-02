@@ -1,0 +1,56 @@
+#######################
+DATABASE SPECIFICATIONS
+#######################
+
+##############
+- Table
+	>>> Column
+##############
+
+- adminsp
+	>>> adminsp_id
+	>>> username
+	>>> password
+	>>> business_name
+	>>> email
+	>>> first_name
+	>>> last_name
+	>>> contact_number
+	>>> address_line
+	>>> city
+	>>> province
+	>>> postal_code
+	>>> adminsp_image
+	>>> registration_date
+	>>> account_status
+- client
+	>>> client_id
+	>>> username
+	>>> password
+	>>> email
+	>>> first_name
+	>>> last_name
+	>>> contact_number
+	>>> address_line
+	>>> city
+	>>> province
+	>>> postal_code
+	>>> client_image
+	>>> registration_date
+	>>> account_status
+- service
+	>>> service_id
+	>>> provider_id
+	>>> name
+	>>> description
+	>>> service_fee
+	>>> service_image
+	>>> service_status
+- transaction
+	>>> trans_number
+	>>> init_date
+	>>> comp_date
+	>>> service_id
+	>>> client_id
+	>>> adminsp_id
+	>>> status

@@ -1,0 +1,392 @@
+#####################################
+HOUSEKEEPING WEB APPLICATION USE CASE
+#####################################
+
+#########################
+WEB TECHNOLOGIES:
+	>>> Java Server Pages
+	>>> Spring MVC
+	>>> PHP
+	>>> Laravel
+	>>> Bootstrap
+	>>> AJAX
+	>>> jQuery
+	>>> MySQL
+	>>> phpMyAdmin
+#########################
+
+#####################
+SYSTEM USERS:
+* Super Administrator
+* Administrator
+* Service Provider
+* Client
+#####################
+
+###################
+SUPER ADMINISTRATOR
+###################
+- Account Login
+	>>> Check if user exists
+	>>> Check if username is valid
+	>>> Check if password is valid
+	>>> Check if username matches password
+	>>> Check if password matches username
+- Service Management
+	>>> View Services
+		- Service ID
+		- Service Provider
+		- Service Name
+		- Service Fee
+		- Service Status
+	>>> View Service Information
+		- Service ID
+		- Service Provider
+		- Service Provider Email
+		- Service Provider Contact Number
+		- Service Name
+		- Service Description
+		- Service Fee
+		- Service Image
+		- Service Status
+- Transaction Management and Monitoring
+	>>> View Transactions
+		- Transaction Number
+		- Date of Scheduling
+		- Date Completed
+		- Service Name
+		- Client Name
+		- Service Provider Name
+		- Client Comments
+		- Transaction Status
+			>>> Completed
+			>>> Pending
+			>>> Accepted
+			>>> Cancelled
+	>>> Search for a Particular Transaction
+		- Filter According to Column
+		- Transaction Number
+		- Service Name
+		- Client Name
+		- Service Provider Name
+		- Transaction Status
+			>>> Completed
+			>>> Pending
+			>>> Accepted
+			>>> Cancelled
+	>>> View Total Completed Transactions
+	>>> View Monthly Completed Transactions
+	>>> View Weekly Completed Transactions
+- Administrator/Service Provider Account Management
+	>>> View Administrator/Service Provider Accounts
+		- Account ID
+		- Username
+		- Email
+		- Contact Number
+		- Service Provider Name
+		- Date of Registration
+		- Account Status
+	>>> View Administrator/Service Provider Account Information
+		- Account ID
+		- Username
+		- Password
+		- Email
+		- Contact Number
+		- Service Provider Name
+		- Proprietor Name
+		- Business Address
+		- City
+		- Province
+		- Postal Code
+		- Profile Image
+		- Date of Registration
+		- Account Status
+	>>> Activate Administrator or Service Provider Account
+		- Confirm Activation Before Proceeding
+	>>> Suspend Administrator or Service Provider Account
+		- Confirm Suspension Before Proceeding
+	>>> Deactivate Administrator or Service Provider Account
+		- Confirm Deactivation Before Proceeding
+	>>> Accept Administrator/Service Provider Account Registration
+		- Confirm Acceptance Before Proceeding
+	>>> Decline Administrator/ Service Provider Account Registration
+		- Confirm Declination Before Proceeding
+- Client Account Management
+	>>> View Client Accounts
+		- Account ID
+		- Username
+		- Email
+		- Contact Number
+		- Client Name
+		- Date of Registration
+		- Account Status
+	>>> View Client Account Information
+		- Account ID
+		- Username
+		- Password
+		- Email
+		- Contact Number
+		- Client Name
+		- Client Address
+		- City
+		- Province
+		- Postal Code
+		- Profile Image
+		- Date of Registration
+		- Account Status
+	>>> Activate User Account
+		- Confirm Activation Before Proceeding
+	>>> Suspend User Account
+		- Confirm Suspension Before Proceeding
+	>>> Deactivate User Account
+		- Confirm Deactivation Before Proceeding
+	>>> Accept Client Account Registration
+		- Confirm Acceptance Before Proceeding 
+	>>> Reject Client Account Registration
+		- Confirm Rejection Before Proceeding
+- View Website as a Client
+
+#############################
+SERVICE PROVIDER/ADMNISTRATOR
+#############################
+- Account Login
+	>>> Check if user exists
+	>>> Check if username is valid
+	>>> Check if password is valid
+	>>> Check if username matches password
+	>>> Check if password matches username
+	>>> Check if user is deactivated
+	>>> Check if user is already logged in
+- Account Registration
+	>>> Username
+	>>> Password
+	>>> Email
+	>>> Contact Number
+	>>> Service Provider Name
+	>>> Proprietor First Name
+	>>> Proprietor Last Name
+	>>> Business Address
+	>>> City
+	>>> Province
+	>>> Postal Code
+	>>> Check if input is valid
+	>>> Check if username is already taken
+	>>> Check if email is already taken
+	>>> Check if password is more than or equal to 6 characters
+	>>> Check if password is less than or equal to 25 characters
+	>>> Check if password matches confirmation
+- Service Management
+	>>> View Own Services
+		- Service ID
+		- Service Name
+		- Service Fee
+		- Service Status
+	>>> View Own Service Information
+		- Service ID
+		- Service Name
+		- Service Description
+		- Service Fee
+		- Service Image
+		- Service Status
+	>>> Add New Service
+		- Service Name
+		- Service Description
+		- Service Fee
+		- Service Image
+	>>> Edit Service Information
+		- Service Name
+		- Service Description
+		- Service Fee
+		- Service Image
+	>>> Remove Own Service
+		- Confirm Removal Before Proceeding
+- Transaction Management and Monitoring
+	>>> View Transactions
+		- Transaction Number
+		- Date of Scheduling
+		- Date Completed
+		- Service Name
+		- Client Name
+		- Client Comments
+		- Transaction Status
+			>>> Completed
+			>>> Pending
+			>>> Accepted
+			>>> Cancelled
+	>>> Search for a Particular Transaction
+		- Filter According to Column
+		- Transaction Number
+		- Service Name
+		- Client Name
+		- Transaction Status
+			>>> Completed
+			>>> Pending
+			>>> Accepted
+			>>> Cancelled
+	>>> Accept Service Request
+		- Confirm Acceptance Before Proceeding
+	>>> Decline Service Request
+		- Confirm Declination Before Proceeding
+	>>> Cancel Accepted Service
+		- Confirm Cancellation Before Proceeding
+	>>> View Total Completed Transactions
+	>>> View Monthly Completed Transactions
+	>>> View Weekly Completed Transactions
+	>>> View Total Earnings
+	>>> View Monthly Earnings
+	>>> View Weekly Earnings
+- Account Management
+	>>> View Account Information
+		- Account ID
+		- Username
+		- Email
+		- Contact Number
+		- Service Provider Name
+		- Proprietor Name
+		- Business Address
+		- City
+		- Province
+		- Postal Code
+		- Profile Image
+		- Date of Registration
+	>>> Edit Account Information
+		- Username
+		- Password
+		- Email
+		- Contact Number
+		- Service Provider Name
+		- Proprietor First Name
+		- Proprietor Last Name
+		- Business Address
+		- City
+		- Province
+		- Postal Code
+		- Profile Image
+- Client Account Management
+	>>> View User Accounts
+		- Account ID
+		- Username
+		- Email
+		- Contact Number
+		- Client Name
+		- Date of Registration
+		- Account Status
+	>>> View User Account Information
+		- Account ID
+		- Username
+		- Email
+		- Contact Number
+		- Client Name
+		- Client Address
+		- City
+		- Province
+		- Postal Code
+		- Profile Image
+		- Date of Registration
+		- Account Status
+	>>> Activate User Account
+		- Confirm Activation Before Proceeding
+	>>> Suspend User Account
+		- Confirm Suspension Before Proceeding
+	>>> Deactivate User Account
+		- Confirm Deactivation Before Proceeding
+	>>> Accept Client Account Registration
+		- Confirm Acceptance Before Proceeding 
+	>>> Reject Client Account Registration
+		- Confirm Rejection Before Proceeding
+- View Website as a Client
+
+######
+CLIENT
+######
+- Account Login
+	>>> Check if user exists
+	>>> Check if username is valid
+	>>> Check if password is valid
+	>>> Check if username matches password
+	>>> Check if password matches username
+	>>> Check if user is deactivated
+	>>> Check if user is already logged in
+- Account Registration
+	>>> Username
+	>>> Password
+	>>> Email
+	>>> Contact Number
+	>>> First Name
+	>>> Last Name
+	>>> Home Address
+	>>> City
+	>>> Province
+	>>> Postal Code
+	>>> Check if input is valid
+	>>> Check if username is already taken
+	>>> Check if email is already taken
+	>>> Check if password is more than or equal to 6 characters
+	>>> Check if password is less than or equal to 25 characters
+	>>> Check if password matches confirmation
+- Service Viewing and Selection
+	>>> Search Function
+		- Search Using Service Name
+		- Search Using Service Provider
+		- Search Filtering Using Service Fee
+		- Search Yields Service Providers Offering Queried Service
+	>>> Display Available Services on Homepage
+		- Display Service Information
+			>>> Service Name
+			>>> Service Provider
+			>>> Service Fee
+			>>> Service Image
+	>>> Display Selected Service Information
+		- Display Selected Service On Separate Web Page
+			>>> Service Name
+			>>> Service Description
+			>>> Service Provider
+			>>> Service Provider Email
+			>>> Service Provider Contact Number
+			>>> Service Fee
+			>>> Service Image
+- Service Requisition
+	>>> Schedule a Service Using a Dropdown or a Calendar
+	>>> Optionally Provide Comments in an Input Box
+	>>> Provide a Breakdown of Costs and Fees
+	>>> Confirmation Before Scheduling the Service
+- Transaction Monitoring
+	>>> View Transactions
+		- Transaction Number
+		- Date of Scheduling
+		- Date Completed
+		- Service Name
+		- Service Provider Name
+		- Transaction Status
+			>>> Completed
+			>>> Pending
+			>>> Accepted
+			>>> Cancelled
+	>>> Search for a Particular Transaction
+		- Filter According to Column
+		- Transaction Number
+		- Service Name
+		- Service Provider Name
+		- Transaction Status
+			>>> Completed
+			>>> Pending
+			>>> Accepted
+			>>> Cancelled
+	>>> Cancel Accepted Service
+		- Confirm Cancellation Before Proceeding
+- Account Management
+	>>> Edit Account Information
+	>>> Username
+	>>> Password
+	>>> Email
+	>>> Contact Number
+	>>> Address
+	>>> City
+	>>> State/Province Region
+	>>> Postal Code
+	>>> Check if input is valid
+	>>> Check if username is already taken
+	>>> Check if email is already taken
+	>>> Check if password is more than or equal to 6 characters
+	>>> Check if password is less than or equal to 25 characters
+	>>> Check if password matches confirmation
