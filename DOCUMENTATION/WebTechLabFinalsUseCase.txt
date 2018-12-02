@@ -180,14 +180,12 @@ SERVICE PROVIDER/ADMNISTRATOR
 		- Service ID
 		- Service Name
 		- Service Fee
-		- Service Status
 	>>> View Own Service Information
 		- Service ID
 		- Service Name
 		- Service Description
 		- Service Fee
 		- Service Image
-		- Service Status
 	>>> Add New Service
 		- Service Name
 		- Service Description

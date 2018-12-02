@@ -48,9 +48,9 @@ DATABASE SPECIFICATIONS
 	>>> service_status		tinyint (1)		
 - transaction
 	>>> trans_number		int (16)		PRIMARY
-	>>> init_date			timestamp		CURRENT_TIMESTAMP
-	>>> comp_date			timestamp		NULL
 	>>> service_id			int (16)		
 	>>> client_id			int (16)		
 	>>> adminsp_id			int (16)		
+	>>> init_date			timestamp		CURRENT_TIMESTAMP
+	>>> comp_date			timestamp		NULL
 	>>> status				enum			
