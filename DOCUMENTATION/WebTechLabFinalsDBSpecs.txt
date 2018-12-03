@@ -15,12 +15,12 @@ DATABASE SPECIFICATIONS
 	>>> email				varchar (128)	UNIQUE
 	>>> first_name			varchar (32)	
 	>>> last_name			varchar (32)	
-	>>> contact_number		varchar (11)	
+	>>> contact_number		varchar (11)	UNIQUE
 	>>> address_line		text			
 	>>> city				varchar (64)	
 	>>> province			varchar (64)	
 	>>> postal_code			int (4)			
-	>>> adminsp_image		mediumblob		
+	>>> adminsp_image		mediumblob		NULL
 	>>> registration_date	timestamp		CURRENT_TIMESTAMP
 	>>> account_status		enum			
 - client
@@ -30,12 +30,12 @@ DATABASE SPECIFICATIONS
 	>>> email				varchar (128)	UNIQUE
 	>>> first_name			varchar (32)	
 	>>> last_name			varchar (32)	
-	>>> contact_number		varchar (11)	
+	>>> contact_number		varchar (11)	UNIQUE
 	>>> address_line		text			
 	>>> city				varchar (64)	
 	>>> province			varchar (64)	
 	>>> postal_code			int (4)			
-	>>> client_image		mediumblob		
+	>>> client_image		mediumblob		NULL
 	>>> registration_date	timestamp		CURRENT_TIMESTAMP
 	>>> account_status		enum			
 - service
@@ -44,7 +44,7 @@ DATABASE SPECIFICATIONS
 	>>> name				varchar (128)	
 	>>> description			text			
 	>>> service_fee			decimal (7,2)	
-	>>> service_image		mediumblob		
+	>>> service_image		mediumblob		NULL
 	>>> service_status		tinyint (1)		
 - transaction
 	>>> trans_number		int (16)		PRIMARY
