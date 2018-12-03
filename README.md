@@ -34,7 +34,7 @@ This web application will provide a portal where clients can avail of housekeepi
 
 ## Project Components
 ### Admin & Service Provider Module
-- [ ] Account Login and Registration
+- [X] Account Login and Registration
 - [ ] Service Management
 - [ ] Transaction Management and Monitoring
 - [ ] Administrator/Service Provider Account Management
