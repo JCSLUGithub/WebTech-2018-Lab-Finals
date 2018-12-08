@@ -38,7 +38,7 @@ This web application will provide a portal where clients can avail of housekeepi
 - [ ] Service Management
 - [ ] Transaction Management and Monitoring
 - [X] Administrator/Service Provider Account Management
-- [ ] Client Account Management
+- [X] Client Account Management
 ### Client Module
 - [ ] Account Login and Registration
 - [ ] Service Viewing and Selection
