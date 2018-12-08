@@ -27,7 +27,11 @@
 		<input type="submit" value="Logout">
 	</form>
 	
-	<h2><a href="${pageContext.request.contextPath}/ViewAllAccounts">Admin/SP Account Management</a></h2>
+	<h2><a href="${pageContext.request.contextPath}/ViewAllAdminSPAccounts">Admin/SP Account Management</a></h2>
+	
+	<h2><a href="${pageContext.request.contextPath}/ViewAllClientAccounts">Client Account Management</a></h2>
+	
+	
 	
 	<h2><a href="servicemgmt.jsp">Service Management</a></h2>
 	

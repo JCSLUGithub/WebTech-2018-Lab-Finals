@@ -8,23 +8,22 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.accountmgmt.adminsp.AccountInfo;
+import com.accountmgmt.client.AccountInfo;
 
-public class AdminSPAccountMgmtDAO {
-	
+public class ClientMgmtDAO {
+
 	Connection dbConnection = null;
 	String dbURL = "jdbc:mysql://localhost:3306/db_housekeeping";
 	String dbUsername = "root";
 	String dbPassword = "";
 	
-	String sqlAccountList = "SELECT adminsp_id, username, business_name, email, "
-						+ "contact_number, registration_date, account_status FROM adminsp";
-	String sqlAccount = "SELECT * FROM adminsp WHERE adminsp_id = ?";
-	
-	String sqlActivate = "UPDATE adminsp SET account_status = 'Activated' WHERE adminsp_id = ?";
-	String sqlSuspend = "UPDATE adminsp SET account_status = 'Suspended' WHERE adminsp_id = ?";
-	String sqlDeactivate = "UPDATE adminsp SET account_status = 'Deactivated' WHERE adminsp_id = ?";
-	String sqlDelete = "DELETE FROM adminsp WHERE adminsp_id = ?";
+	String sqlAccountList = "SELECT client_id, username, email, first_name, last_name, "
+						+ "contact_number, registration_date, account_status FROM client";
+	String sqlAccount = "SELECT * FROM client WHERE client_id = ?";
+	String sqlActivate = "UPDATE client SET account_status = 'Activated' WHERE client_id = ?";
+	String sqlSuspend = "UPDATE client SET account_status = 'Suspended' WHERE client_id = ?";
+	String sqlDeactivate = "UPDATE client SET account_status = 'Deactivated' WHERE client_id = ?";
+	String sqlDelete = "DELETE FROM client WHERE client_id = ?";
 	
 	public Connection connectToDB() {
 		
@@ -38,7 +37,6 @@ public class AdminSPAccountMgmtDAO {
 		}
 		
 		return dbConnection;
-		
 	}
 	
 	public void closeDBConnection() {
@@ -66,10 +64,11 @@ public class AdminSPAccountMgmtDAO {
 			
 			while (resultSet.next()) {
 				AccountInfo account = new AccountInfo();
-				account.setAdminSPID(resultSet.getInt("adminsp_id"));
+				account.setClientID(resultSet.getInt("client_id"));
 				account.setUsername(resultSet.getString("username"));
-				account.setBusinessName(resultSet.getString("business_name"));
 				account.setEmail(resultSet.getString("email"));
+				account.setFirstName(resultSet.getString("first_name"));
+				account.setLastName(resultSet.getString("last_name"));
 				account.setContact(resultSet.getString("contact_number"));
 				account.setRegistrationDate(resultSet.getString("registration_date"));
 				account.setAccountStatus(resultSet.getString("account_status"));
@@ -90,7 +89,6 @@ public class AdminSPAccountMgmtDAO {
 		AccountInfo accountInfo;
 		String Username;
 		String Password;
-		String BusinessName;
 		String Email;
 		String FirstName;
 		String LastName;
@@ -115,7 +113,6 @@ public class AdminSPAccountMgmtDAO {
 				
 				Username = resultSet.getString("username");
 				Password = resultSet.getString("password");
-				BusinessName = resultSet.getString("business_name");
 				Email = resultSet.getString("email");
 				FirstName = resultSet.getString("first_name");
 				LastName = resultSet.getString("last_name");
@@ -130,8 +127,7 @@ public class AdminSPAccountMgmtDAO {
 				accountInfo = new AccountInfo(
 									accountID,
 									Username,
-									Password, 
-									BusinessName,
+									Password,
 									Email,
 									FirstName,
 									LastName,
@@ -140,8 +136,9 @@ public class AdminSPAccountMgmtDAO {
 									City,
 									Province,
 									postalCode,
-									RegistrationDate,
-									AccountStatus);
+									AccountStatus,
+									RegistrationDate);
+				
 				return accountInfo;
 				
 			}
@@ -151,7 +148,6 @@ public class AdminSPAccountMgmtDAO {
 		}
 		
 		return null;
-		
 	}
 	
 	public void activateAccount(Connection dbConnection, int accountID) throws SQLException {
@@ -193,5 +189,5 @@ public class AdminSPAccountMgmtDAO {
 		pStmt.executeUpdate();
 		
 	}
-
+	
 }
