@@ -5,7 +5,7 @@
 
 <head>
 	<meta charset="ISO-8859-1">
-	<title>DASHBOARD.JSP</title>
+	<title>SERVICEMGMT.JSP</title>
 </head>
 
 <body>
@@ -21,16 +21,25 @@
 	
 	%>
 	
-	<h1>Welcome to the SP/Admin Dashboard, ${username}!</h1>
+	<table>
 	
-	<form action="Logout" method="POST">
-		<input type="submit" value="Logout">
-	</form>
-	
-	<h2><a href="${pageContext.request.contextPath}/ViewAllAccounts">Admin/SP Account Management</a></h2>
-	
-	<h2><a href="servicemgmt.jsp">Service Management</a></h2>
-	
+		<tr>
+			<th>Service ID</th>
+			<th>Service Provider</th>
+			<th>Service Name</th>
+			<th>Service Fee</th>
+			<th>Service Status</th>
+		</tr>
+		
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		
+	</table>
 	
 </body>
 
